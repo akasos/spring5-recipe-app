@@ -30,13 +30,9 @@ public class Recipe {
     //Jpa will create this as a blob field in the database...BinaryLargeObject
     private Byte[] image;
 
-<<<<<<< HEAD
-    //Recipe is the owner...delete the Recipe the notes will be deleted as well.
-=======
     @Enumerated(value = EnumType.STRING)
     private Difficulty difficulty;
 
->>>>>>> jpa-enumerations
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
 
