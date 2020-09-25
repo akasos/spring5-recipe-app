@@ -18,6 +18,8 @@ public class Ingredient {
     //private UnitOfMeasure uom;
 
     @ManyToOne
+    //One Ingredient belongs toa recipe..don't get hung up on the Many part...it just makes it so we can navigate back
+    //to the recipe.
     private Recipe recipe;
 
     public Long getId() {

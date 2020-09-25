@@ -23,6 +23,8 @@ public class Recipe {
     //todo add
     //private Difficulty difficulty;
 
+    //Recipe owns Ingredient, mappedBy = the property on the child class, The recipe will get stored as a property
+    //on the child
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
     private Set<Ingredient> ingredients;
 
