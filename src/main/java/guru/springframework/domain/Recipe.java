@@ -31,6 +31,9 @@ public class Recipe {
     private Byte[] image;
 
     @Enumerated(value = EnumType.STRING)
+    //ORDINAL is the default...persisted as 1,2,3 it's bad because if you add another value...in the database the values
+    //will shift...1,2,3,4
+    //STRING...persisted as Strings
     private Difficulty difficulty;
 
     @OneToOne(cascade = CascadeType.ALL)
