@@ -16,6 +16,7 @@ public class Ingredient {
     private BigDecimal amount;
 
     @OneToOne(fetch = FetchType.EAGER)
+    // Default behavior is EAGEr..just showing how to specify the intent. 
     private UnitOfMeasure uom;
 
     @ManyToOne
