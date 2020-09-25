@@ -23,8 +23,10 @@ public class Recipe {
     //private Difficulty difficulty;
 
     @Lob
+    //Jpa will create this as a blob field in the database...BinaryLargeObject
     private Byte[] image;
 
+    //Recipe is the owner...delete the Recipe the notes will be deleted as well.
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
 

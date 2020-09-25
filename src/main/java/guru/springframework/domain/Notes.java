@@ -16,6 +16,8 @@ public class Notes {
     private Recipe recipe;
 
     @Lob
+    //String can be crazy large...hibernate && JPA only support 255 chars..that is why we use a lob..LargeObject
+    //Jpa/hibernate will store it into a clob field in the database.
     private String recipeNotes;
 
     public Long getId() {
