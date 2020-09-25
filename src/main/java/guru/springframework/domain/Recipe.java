@@ -20,8 +20,6 @@ public class Recipe {
     private String source;
     private String url;
     private String directions;
-    //todo add
-    //private Difficulty difficulty;
 
     //Recipe owns Ingredient, mappedBy = the property on the child class, The recipe will get stored as a property
     //on the child
@@ -32,7 +30,13 @@ public class Recipe {
     //Jpa will create this as a blob field in the database...BinaryLargeObject
     private Byte[] image;
 
+<<<<<<< HEAD
     //Recipe is the owner...delete the Recipe the notes will be deleted as well.
+=======
+    @Enumerated(value = EnumType.STRING)
+    private Difficulty difficulty;
+
+>>>>>>> jpa-enumerations
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
 
@@ -122,5 +126,13 @@ public class Recipe {
 
     public void setIngredients(Set<Ingredient> ingredients) {
         this.ingredients = ingredients;
+    }
+
+    public Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(Difficulty difficulty) {
+        this.difficulty = difficulty;
     }
 }
